@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <style type="text/css">
+        .button1
+        {
+            background-color: blue;
+        }
+        .button2
+        {
+            background-color: red;
+        }
+
+        .lamp
+        {
+            height: auto;
+            width: 12%;
+            display: flex;
+            margin-right: auto;
+            margin-left: auto;
+            rotate: -0.5deg;
+        }
+
+        .light
+{
+    display: flex;
+    height: auto;
+    width: 44%;
+    margin-left: auto;
+    margin-right: auto;
+    top: 345px;
+
+}
+
+    </style> 
+    <title>Document</title>
+</head>
+<body bgcolor="black">
+
+    <div align="center">
+        <input class="button1" type="button" id="light_on" value="light on">
+        <input class="button2" type="button" id="light_off" value="light off">
+        
+    </div>
+    <br>
+
+    <img class="lamp" src="lamp.png">
+    <img class="light" id="light" src="light.png" hidden="">
+
+    <script type="text/javascript">
+        $("#light_off").click(
+function()
+{ 
+    $("#light").fadeOut();
+}
+        );
+        $("#light_on").click(
+function()
+{ 
+    $("#light").fadeIn();
+}
+        );
+    </script>
+</body>
+</html>
